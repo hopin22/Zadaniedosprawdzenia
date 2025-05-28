@@ -1,14 +1,32 @@
 // import static org.junit.jupiter.api.Assertions.assertEquals;
-
-// import org.junit.jupiter.api.Test;
+import java.util.Scanner;
 
 public class Main {
   public static void main(String[] args) {
-    System.out.println("Hello world!");
+  Scanner scanner = new Scanner(System.in);
+    System.out.print("Ile liczb chcesz wprowadzić?");
+      int n = scanner.nextInt();
+    int[] liczby = new int[n];
+
+    System.outprintln("Wprowadź"+ n +" liczby:");
+    for (int i = 0; i < n; i++) {
+      liczby[i] = scanner.nextInt();
+    }
+    int max = liczby[0];
+    int min = liczby[0];
+
+    for(int i = 1; i < liczby.lenght;i++){
+      if(liczby[i] > max){
+        max = liczby[i];
+      }
+    }
+    if(liczby[i] < min){
+      min = liczby[i];
+    }
+    int roznica = max - min;
+    System.out.println("Różnica między największą i najmniejszą liczbą to: " + roznica);
+     
   }
 
-  // @Test
-  // void addition() {
-  //     assertEquals(2, 1 + 1);
-  // }
+  
 }
